@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Allemagne - Digital Leaders</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- ⚠️ IMPORTANT : ../style.css car on est dans le dossier guides/ -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="background-image">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- BOUTON RETOUR -->
+    <a href="../index.html" class="btn-back-hub">
+        <i class="fas fa-arrow-left"></i> Retour aux guides
+    </a>
+
+    <div class="container guide-container">
+        
+        <!-- EN-TÊTE -->
+        <div class="guide-header">
+            <div class="guide-header-top">
+                <h1 class="guide-title">
+                    IMMIGREZ GRATUITEMENT <br>EN ALLEMAGNE : 
+                    <span class="text-highlight">LE GUIDE ULTIME</span>
+                </h1>
+                <div class="badge-rating">
+                    <span class="stars">★★★★★</span> 88% (8 Avis)
+                    <span class="badge-separator">🔥 1K+ Achats</span>
+                </div>
+            </div>
+            <p class="guide-subtitle">
+                Immigrer Gratuitement en Allemagne <br> 
+                <span class="text-green">Procédure simplifiée étape par étape, sans agence ni arnaque !</span>
+            </p>
+            <div class="download-badge">
+                <i class="fas fa-download"></i> 
+                <strong>Téléchargez votre guide maintenant</strong>
+            </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="sold-stock">
+            <div class="stock-item"><span class="stock-label">Vendu:</span> 1222</div>
+            <div class="stock-item"><span class="stock-label">Restant:</span> 28</div>
+            <div class="stock-item"><span class="stock-label">⏳ Offre à durée limitée</span></div>
+        </div>
+
+        <!-- PRIX -->
+        <div class="price-block">
+            <div class="old-price">3 900 FCFA</div>
+            <div class="new-price">2 000 FCFA</div>
+            
+<div class="pdf-preview-section" id="pdfPreviewSection">
+    <h2 class="section-title">
+        <i class="fas fa-book-open"></i> Aperçu du guide
+    </h2>
+    <p style="margin-bottom: 16px; color: #64748b;">
+        Consultez gratuitement les premières pages du guide avant de l'acheter
+    </p>
+    
+    <!-- Visionneuse PDF intégrée -->
+    <div class="pdf-viewer-container">
+        <iframe 
+            src="pdf/guide-allemagne.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" 
+            class="pdf-viewer"
+            id="pdfViewer"
+            frameborder="0"
+            title="Aperçu du guide Allemagne">
+        </iframe>
+    </div>
+    
+    <!-- Message pour la version complète -->
+    <div class="pdf-restricted-overlay" id="pdfRestrictedOverlay">
+        <div class="pdf-restricted-content">
+            <i class="fas fa-lock fa-3x" style="color: #b45309;"></i>
+            <h3>Contenu Premium</h3>
+            <p>Les 3 premières pages sont gratuites.<br>Achetez le guide complet pour tout débloquer.</p>
+            <p class="new-price" style="font-size: 1.8rem;">2 000 FCFA</p>
+            <button class="btn-offer" id="btnUnlockPdf">
+                <i class="fas fa-unlock"></i> Débloquer le guide complet
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION PDF COMPLET (affiché après paiement) -->
+<div class="pdf-full-section" id="pdfFullSection" style="display: none;">
+    <h2 class="section-title" style="color: #1e7e34;">
+        <i class="fas fa-check-circle"></i> Votre guide complet
+    </h2>
+    <p style="margin-bottom: 16px; color: #1e7e34;">
+        ✅ Guide débloqué avec succès ! Vous pouvez le consulter en ligne ou le télécharger.
+    </p>
+    
+    <!-- Bouton téléchargement -->
+    <a href="pdf/guide-allemagne.pdf" download="Guide-Allemagne-Digital-Leaders.pdf" class="btn-download-pdf">
+        <i class="fas fa-download"></i> Télécharger le PDF complet
+    </a>
+    
+    <!-- Visionneuse PDF complète -->
+    <div class="pdf-viewer-container full-viewer">
+        <iframe 
+            src="pdf/guide-allemagne.pdf#toolbar=1&navpanes=1&scrollbar=1" 
+            class="pdf-viewer-full"
+            frameborder="0"
+            title="Guide complet Allemagne">
+        </iframe>
+    </div>
+</div>
+            <button class="btn-offer" id="btnMainOffer">
+                <i class="fas fa-shopping-cart"></i> Profiter de l'offre
+            </button>
+            
+            <div class="preview-link">
+                <a href="#" id="linkPreview">
+                    <i class="far fa-eye"></i> Découvrir un aperçu
+                </a>
+            </div>
+        </div>
+
+        <!-- PAIEMENT -->
+        <div class="payment-icons">
+            <i class="fab fa-cc-visa fa-2x"></i>
+            <i class="fab fa-cc-mastercard fa-2x"></i>
+            <span class="payment-mobile">📱 Orange Money</span>
+            <span class="payment-mobile">📱 Mobile Money</span>
+        </div>
+        <div class="how-to-buy">
+            <i class="fas fa-question-circle"></i> 
+            <strong>Comment acheter ?</strong> Cliquez sur "Profiter de l'offre" et suivez les instructions.
+        </div>
+        <!-- MODAL DE PAIEMENT -->
+<div class="payment-modal" id="paymentModal" style="display: none;">
+    <div class="payment-modal-content">
+        <button class="close-modal" id="closePaymentModal">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <h2 class="payment-title">
+            <i class="fas fa-shopping-cart"></i> Finaliser votre achat
+        </h2>
+        
+        <div class="payment-product-info">
+            <p><strong>Guide Allemagne</strong></p>
+            <p class="new-price" style="font-size: 1.8rem;">2 000 FCFA</p>
+        </div>
+        
+        <!-- Étapes de paiement -->
+        <div class="payment-steps">
+            <div class="step active" data-step="1">
+                <span class="step-number">1</span>
+                <span class="step-label">Choisir le mode de paiement</span>
+            </div>
+            <div class="step" data-step="2">
+                <span class="step-number">2</span>
+                <span class="step-label">Effectuer le paiement</span>
+            </div>
+            <div class="step" data-step="3">
+                <span class="step-number">3</span>
+                <span class="step-label">Confirmation</span>
+            </div>
+        </div>
+        
+        <!-- Étape 1 : Choix du mode de paiement -->
+        <div class="payment-step-content" id="step1Content">
+            <div class="payment-methods">
+                <div class="payment-method-card" data-method="orange">
+                    <span style="font-size: 2rem;">📱</span>
+                    <strong>Orange Money</strong>
+                    <span>Paiement mobile sécurisé</span>
+                </div>
+                <div class="payment-method-card" data-method="mtn">
+                    <span style="font-size: 2rem;">📱</span>
+                    <strong>MTN Mobile Money</strong>
+                    <span>Paiement mobile sécurisé</span>
+                </div>
+                <div class="payment-method-card" data-method="carte">
+                    <span style="font-size: 2rem;">💳</span>
+                    <strong>Carte Bancaire</strong>
+                    <span>Visa, Mastercard</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Étape 2 : Instructions de paiement -->
+        <div class="payment-step-content" id="step2Content" style="display: none;">
+            <div class="payment-instructions" id="paymentInstructions">
+                <!-- Contenu dynamique selon la méthode choisie -->
+            </div>
+        </div>
+        
+        <!-- Étape 3 : Code de déblocage -->
+        <div class="payment-step-content" id="step3Content" style="display: none;">
+            <div class="unlock-section">
+                <i class="fas fa-check-circle fa-3x" style="color: #22c55e;"></i>
+                <h3>Paiement reçu !</h3>
+                <p>Entrez votre code de déblocage reçu par SMS/email :</p>
+                
+                <input 
+                    type="text" 
+                    id="unlockCode" 
+                    class="unlock-input" 
+                    placeholder="Ex: DL-AUS-2025-XXXX"
+                    maxlength="20">
+                
+                <button class="btn-offer" id="btnVerifyCode">
+                    <i class="fas fa-unlock"></i> Débloquer mon guide
+                </button>
+                
+                <p class="code-info">
+                    <i class="fas fa-info-circle"></i> 
+                    Le code vous est envoyé automatiquement après confirmation du paiement.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Boutons de navigation -->
+        <div class="payment-nav">
+            <button class="btn-payment-back" id="btnPaymentBack" style="display: none;">
+                <i class="fas fa-arrow-left"></i> Retour
+            </button>
+            <button class="btn-payment-next" id="btnPaymentNext">
+                Continuer <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+        <hr>
+
+        <!-- AVIS -->
+        <div>
+            <div class="section-title">
+                <i class="fas fa-star" style="color: #fbbf24;"></i> Avis vérifiés
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-name">
+                        <i class="fas fa-user-circle"></i> Marie Georgette N. <span class="stars">★★★★★</span>
+                    </div>
+                    <div class="testimonial-date">il y a 9 mois</div>
+                </div>
+                <div class="testimonial-text">"C'est une très très bonne opportunité je vous la recommande vivement ! Après m'être faite arnaquée par une agence à Douala, ce livre m'a sauvée. Aujourd'hui je vis au Luxembourg depuis 2 ans."</div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-name"><i class="fas fa-globe"></i> Pulchérie Geneviève T.</div>
+                    <div class="testimonial-date">il y a 11 jours</div>
+                </div>
+                <div class="testimonial-text">"Bonsoir je suis très intéressée par la procédure pour aller comme travailleur qualifié en Australie. Je suis infirmière avec 8 ans d'expérience."</div>
+            </div>
+        </div>
+
+        <!-- CONVERSATION WHATSAPP -->
+        <div class="whatsapp-conversation">
+            <div class="whatsapp-header">
+                <i class="fab fa-whatsapp fa-2x" style="color:#25D366;"></i>
+                <span class="whatsapp-brand">Digital Leaders · 10:40</span>
+            </div>
+            <div class="conv-message">
+                <div><span class="conv-name">Mr Landry</span> <span class="conv-time">10:18 AM</span></div>
+                <div>Svp vous êtes à quel niveau avec votre procédure ?</div>
+            </div>
+            <div class="conv-message conv-reply">
+                <div><span class="conv-name">Client (M. Octave)</span> <span class="conv-time">10:24 AM</span></div>
+                <div>Bonjour Mr, j'ai déjà passé l'entretien avec l'employeur et c'était concluant 😂 Il va soumettre mon dossier cette semaine !</div>
+            </div>
+        </div>
+
+        <!-- SECTION ACCROCHE -->
+        <div class="vision-section">
+            <h2>Et si ton avenir se trouvait de l'autre côté du monde ?</h2>
+            <p>
+                Imagine : Tu vis à Hamburg, la ville industrielle allemande, Tu travailles légalement, tu gagnes en Euro, 
+                tu découvres un pays moderne, stable, généreux envers les immigrants.
+            </p>
+            <p>Tu offres un meilleur avenir à ta famille.</p>
+            <p>Et surtout... <strong>tu as tout fait toi-même.</strong></p>
+            <div class="key-badge">✨ <strong>Votre clé vers la réussite</strong></div>
+        </div>
+
+        <!-- L'ALLEMAGNE RECRUTE -->
+        <div>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> L'Allemagne recrute massivement</h2>
+            <p>
+                Face à la pénurie de main-d'œuvre, le gouvernement allemand a mis en place des procédures légales simples. 
+                <strong>Avec ce guide, tu détiens l'avantage décisif.</strong>
+            </p>
+        </div>
+
+        <!-- AVANTAGES -->
+        <div class="grid-benefits">
+            <div class="benefit-item"><i class="fas fa-passport"></i> Système d'immigration carte blueue UE</div>
+            <div class="benefit-item"><i class="fas fa-file-alt"></i> Tous les visas disponibles</div>
+            <div class="benefit-item"><i class="fas fa-chart-line"></i> Atteindre les 65 points</div>
+            <div class="benefit-item"><i class="fas fa-graduation-cap"></i> Reconnaître diplômes</div>
+            <div class="benefit-item"><i class="fas fa-language"></i> Test d'allemand facilement</div>
+            <div class="benefit-item"><i class="fas fa-check-circle"></i> Procédure sans agence</div>
+        </div>
+
+        <!-- CHAPITRES -->
+        <div>
+            <h3 class="chapters-title">📖 Aperçu des chapitres</h3>
+            <ul class="chapter-list">
+                <li><i class="fas fa-caret-right"></i> Introduction – Pourquoi immigrer en Allemagne?</li>
+                <li><i class="fas fa-caret-right"></i> Chapitre 1 – Les différents types de visas</li>
+                <li><i class="fas fa-caret-right"></i> Chapitre 2 – Atteindre les critères obligatoires</li>
+                <li><i class="fas fa-caret-right"></i> Chapitre 3 – Faire reconnaître ses diplômes</li>
+                <li><i class="fas fa-caret-right"></i> Chapitre 4 – Passer ton test de langue</li>
+                <li><i class="fas fa-caret-right"></i> Chapitre 5 – Dépôt de dossier et suivi</li>
+            </ul>
+        </div>
+
+        <!-- RAPPEL OFFRE -->
+        <div class="price-block price-block-bottom">
+            <div class="old-price">3 900 FCFA</div>
+            <div class="new-price">2 000 FCFA</div>
+            
+            <button class="btn-offer" id="btnSecondOffer">
+                <i class="fas fa-rocket"></i> Profiter de l'offre
+            </button>
+            
+            <p class="secure-payment">
+                <i class="fas fa-lock"></i> Paiement sécurisé – Accès immédiat après achat
+            </p>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-links">
+                <a href="../index.html">Accueil</a>
+                <a href="#">Mes achats</a>
+                <a href="#">À propos</a>
+                <a href="#">Aide</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="disclaimer">
+                Digital Leaders © 2025 – Guide informatif sur l'immigration.
+            </p>
+            <p class="digital-badge">
+                <i class="fas fa-shield-alt"></i> 100% digital – Téléchargement instantané
+            </p>
+        </footer>
+    </div>
+
+    <!-- ⚠️ IMPORTANT : ../script.js car on est dans le dossier guides/ -->
+    <script src="../script.js"></script>
+</body>
+</html>
